@@ -72,6 +72,16 @@ Arithmetic operations work element wise on the array.
 Arithmetic Multiplication vs Matrix Multiplication
 
 '*' - works element wise 
+
 '@' or '.dot' - performs matix multiplication
 
 # Indexing, slicing and iterating
+
+Indexing : Indexing starts with 0
+
+Slicing : Here we can print only a part of elements or a pattern of elements. Three inputs are given start point , end point and the gap number.
+
+Iterating : Works as a loop and written as (for i in a:)
+
+---
+
