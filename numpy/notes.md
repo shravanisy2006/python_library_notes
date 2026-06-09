@@ -62,3 +62,16 @@ import numpy as np
 
 4. linspace
 -  receives an argument for the number of elements an array should have.
+
+---
+
+# Arithmetic Operations on Arrays
+
+Arithmetic operations work element wise on the array.
+
+Arithmetic Multiplication vs Matrix Multiplication
+
+'*' - works element wise 
+'@' or '.dot' - performs matix multiplication
+
+# Indexing, slicing and iterating
