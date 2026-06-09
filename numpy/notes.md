@@ -49,3 +49,16 @@ import numpy as np
 
 ---
 
+# Different array function
+
+1. zeros function
+-  create an array with all elements as zero.
+
+2. ones function
+-  create an array with all elements as one.
+
+3. arange
+-  create sequence of array
+
+4. linspace
+-  receives an argument for the number of elements an array should have.
