@@ -38,5 +38,14 @@ print("\n")
 c = np.c_[np.array([1 , 2 , 3]) , np.array([4 , 5 , 6])]
 print(c)
 
+print("\n")
 
 ## SPLITTING OF ARRAY
+
+c = np.floor (10 * rg.random((2 , 12)))
+print(c)
+print("splitted array: ", np.hsplit(c , 3))
+
+print("\n")
+
+print("splitted array: ", np.hsplit(c , (3 , 4)))

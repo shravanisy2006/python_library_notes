@@ -119,3 +119,81 @@ There are different ways through which we can concaneate or stack different arra
 
 # Splitting of Arrays
 
+1. .hsplit - splits array horizontally
+
+    - .hsplit(a, 3) : splits array a into 3 different arrays
+
+    - .hsplit(a, (3, 4)) : splits array a after the 3rd and the 4th column
+
+2. .vplit - splits array vertically
+
+---
+
+# Copies and Views
+
+1. No copy at all
+
+-  Simple assignments make no copy of objects or their data.
+
+2. View or shallow copy (.view)
+
+-  Different array objects can share the same data. The view method creates a new array object that looks at the same data.
+
+-  That is changes in one can also result into changes into other also. They have the same data in their memory.
+
+-  e.g. a = ([1 , 2 , 3 , 4])
+        b = a.view()    #Now b is a view of a so any changes made in array a will result in changes in a too
+
+3.  Deep copy
+
+-   The copy method makes a complete copy of the array and its data.
+
+-   Changes in one doesnt reflect in the other.
+
+---
+
+# Functions and Methods overview
+
+1. Array creation:
+
+ arange, array, copy, empty, empty_like, eye, fromfile, fromfunction, identity, linspace, logspace, mgrid, ogrid, ones, ones_like, r_, zeros, zeros_like
+
+2. Conversions :
+
+ndarray.astype, atleast_1d, atleast_2d, atleast_3d, mat
+ 
+3. Manipulations :
+
+array_split, column_stack, concatenate, diagonal, dsplit, dstack, hsplit, hstack, ndarray.item, newaxis, ravel, repeat, reshape, resize, squeeze, swapaxes, take, transpose, vsplit, vstack
+ 
+4. Questions :
+
+all, any, nonzero, where
+
+5. Ordering :
+
+argmax, argmin, argsort, max, min, ptp, searchsorted, sort
+
+6. Operations : 
+
+choose, compress, cumprod, cumsum, inner, ndarray.fill, imag, prod, put, putmask, real, sum
+
+7. Basic Statistics :
+
+cov, mean, std, var
+
+8. Basic Linear Algebra :
+
+cross, dot, outer, linalg.svd, vdot
+
+---
+
+# Broadcasting Rules
+
+Rule No. 1 : If input arrays do not have the same number of dimensions then 1 is added till the time the dimensions aren't the same. 
+
+ Rule No. 2 : Arrays with a size of 1 along a particular dimension act as if they had the size of the array with the largest shape along that dimension. 
+
+ ---
+
+ 
