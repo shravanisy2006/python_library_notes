@@ -85,3 +85,18 @@ Iterating : Works as a loop and written as (for i in a:)
 
 ---
 
+# Array Reshaping
+
+1. Changing the shape of the Array:
+
+    There are 3 three ways through which we can change the shape of the array.
+
+    - .ravel() : returns the array flatened. 
+
+    - .reshape() : returns the array with the modeified shape.
+
+    - .T : returns the array transposed 
+
+                and 
+
+       .T.shape : returns the shape of the transposed array
