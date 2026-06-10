@@ -100,3 +100,22 @@ Iterating : Works as a loop and written as (for i in a:)
                 and 
 
        .T.shape : returns the shape of the transposed array
+
+---
+
+# Stacking Together Different Arrays
+
+There are different ways through which we can concaneate or stack different arrays:
+
+1. .vstack : stacks array vertically (top to bottom)
+
+2. .hstack : stacks array horizontally (left to right)
+
+3. .r_ : appends elements 
+
+4. .c_ : concatenates two arrays top to bottom
+
+---
+
+# Splitting of Arrays
+
