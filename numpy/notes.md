@@ -196,4 +196,10 @@ Rule No. 1 : If input arrays do not have the same number of dimensions then 1 is
 
  ---
 
+ # Conversion of 1D Array into 2D Array
+
+ 1. np.newaxis : Using np.newaxis will increase the dimensions of your array by one dimension when used once.
+
+ 2. np.expand_dims : add an axis at index position.
+
  
