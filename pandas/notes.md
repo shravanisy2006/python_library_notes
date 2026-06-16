@@ -33,3 +33,29 @@ Different ways to print series:
 - Through list
 
 - Through array
+
+---
+
+# DataFrames (2-Dimensional)
+
+class pandas.DataFrame(data, index, columns, dtype, copy)
+
+Parameters: 
+
+- data : ndarray (structured or homogeneous), Iterable, dict, or DataFrame
+
+- index : Index or array-like
+
+- columns : Index or array-like
+
+- dtype : dtype, default None
+
+- copy : bool or None, default None
+
+Different ways to print series:
+
+- Through dictionary
+
+- Through list
+
+- Through array
