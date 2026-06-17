@@ -196,6 +196,8 @@ syntax : variable_name = name_of_dataframe.describe()
 
 Used to split data into groups and perform aggregate operations.
 
+syntax : dataframe_name.groupby(name_of_coumn)[group_on_basis_of_column_name].function
+
 Common functions:
 
 1. mean()
