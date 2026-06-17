@@ -212,3 +212,42 @@ Common functions:
 
 ---
 
+# Merge , Join and Concatination
+
+1. Merge
+
+Used to combine DataFrames based on common columns.
+
+Types:
+
+1. Inner Merge
+2. Outer Merge
+3. Left Merge
+4. Right Merge
+
+Syntax:
+
+pd.merge(df1, df2, how='inner')
+
+2. Join
+
+Used to combine DataFrames based on index values.
+
+Syntax:
+
+df1.join(df2, how='inner')
+
+3. Concatination
+
+Used to combine DataFrames along rows or columns.
+
+axis = 0 → Row-wise
+
+axis = 1 → Column-wise
+
+Syntax:
+
+pd.concat([df1, df2], axis=0)
+
+---
+
