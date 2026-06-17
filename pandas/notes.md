@@ -172,3 +172,21 @@ syntax : variable_name = name_of_dataframe.describe()
 
 ---
 
+# Missing Values
+
+1. .isna() : provides boolean value 'True'  where a null value is presented.
+
+    syntax : dataframe_name.isna()
+
+2. .notnull() : provides boolean value 'True' where a value is present and 'False' where a null value is present.
+
+    syntax : dataframe_name.notnull()
+
+3. .dropna() : drope row where a null value is presented.
+
+    syntax : dataframe_name.dropna()
+
+4. .fillna() : replaces null values with a specified value.
+
+    syntax : dataframe_name.fillna(value)
+

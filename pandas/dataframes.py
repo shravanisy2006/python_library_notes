@@ -125,11 +125,39 @@ print(subsets)
 
 print("\n")
 
+#targetting based on index
+
+sets1 = list_dataframe.iloc[0]
+sets2 = list_dataframe.iloc[0:2, 1:3]
+print("=== Targetting based on index value")
+print(sets1)
+print("\n")
+print(sets2)
+
+print("\n")
+
+
 #conditional selection
 
 condition = list_dataframe[list_dataframe["Salary"] > 24000]
 print("=== Conditional selection ===\n")
 print(condition)
+
+print("\n")
+
+#multiple conditional statement
+
+mul_condition = list_dataframe[(list_dataframe ["Salary"] > 20000) & (list_dataframe ["City"] == "Banglore")]
+print("=== Multiple Conditional selection ===\n")
+print(mul_condition)
+
+print("\n")
+
+#sorting
+
+sort = list_dataframe.sort_values(by = 'Salary' ,  axis = 0 , ascending = False)
+print("=== Sorted Salary ===\n")
+print(sort)
 
 print("\n")
 
