@@ -16,3 +16,30 @@ salaries = pd.DataFrame({
 print(employee)
 print("\n")
 print(salaries)
+
+print("\n")
+
+print("=== Inner Merge of both dataframes===\n")
+merge_inner = pd.merge(employee , salaries, 'inner')
+print(merge_inner)
+
+print("\n")
+
+print("=== Outer Merge of both dataframes===\n")
+merge_outer = pd.merge(employee , salaries, 'outer')
+print(merge_outer)
+
+print("\n")
+
+print("=== left Merge of both dataframes===\n")
+merge_left = pd.merge(employee , salaries, 'left')
+print(merge_left)
+
+print("\n")
+
+print("=== Right Merge of both dataframes===\n")
+merge_right = pd.merge(employee , salaries, 'right')
+print(merge_right)
+
+print("\n")
+
