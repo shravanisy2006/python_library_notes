@@ -190,3 +190,23 @@ syntax : variable_name = name_of_dataframe.describe()
 
     syntax : dataframe_name.fillna(value)
 
+---
+
+# GroupBy
+
+Used to split data into groups and perform aggregate operations.
+
+Common functions:
+
+1. mean()
+
+2. sum()
+
+3. count()
+
+4. max()
+
+5. min()
+
+---
+
