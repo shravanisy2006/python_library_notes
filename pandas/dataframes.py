@@ -47,3 +47,103 @@ label = [1 , 2 , 3]
 array_dataframe = pd.DataFrame(arr, label , columns = column)
 print("=== Dataframe from Array ===")
 print(array_dataframe)
+
+print("\n")
+
+#selection in dataframe
+
+#one column
+one_column = list_dataframe['Name']
+print("=== Names from the data ===\n")
+print(one_column)
+
+print("\n")
+
+#two column
+two_column = list_dataframe[['Name', 'City']]
+print("=== Names and Cities from the data ===\n")
+print(two_column)
+
+print("\n")
+
+#Creating of a new column
+
+list_dataframe["Designation"] = ["Head" , "Manager" , "Lead"]
+print("=== New Column ===\n")
+print(list_dataframe)
+
+print("\n")
+
+#Removing a Column temprorily
+
+remove_age = list_dataframe.drop("Age" , axis = 1)
+print("=== Column Deleted ===\n")
+print(remove_age)
+
+print("\n")
+
+#Removing a column permanantly
+
+print(list_dataframe)
+print("\n")
+
+rem_age = list_dataframe.drop("Age" , axis = 1 , inplace = True)
+print("=== Column Deleted ===\n")
+print(rem_age)
+
+print("\n")
+
+#selecting first 2 rows
+
+first_rows = list_dataframe.head(2)
+print("=== First 2 rows ===\n")
+print(first_rows)
+
+print("\n")
+
+#selecting last 2 rows
+
+last_rows = list_dataframe.tail(2)
+print("=== Last 2 rows ===")
+print(last_rows)
+
+print("\n")
+
+#targetting specific rows
+
+specific_rows = list_dataframe.loc[1]
+print("=== Second Row is ===\n")
+print(specific_rows)
+
+print("\n")
+
+#targetting the subsets of rows and colums
+
+subsets = list_dataframe.loc[[1 , 2]][['Name' , 'Salary']]
+print("=== Printing the subsets of rows and columns ===\n")
+print(subsets)
+
+print("\n")
+
+#conditional selection
+
+condition = list_dataframe[list_dataframe["Salary"] > 24000]
+print("=== Conditional selection ===\n")
+print(condition)
+
+print("\n")
+
+#to fetch info
+
+print("=== Information of dataframe ===\n")
+list_dataframe.info()
+
+print("\n")
+
+#statistics description
+
+print("=== Description ===\n")
+des = list_dataframe.describe()
+print(des) 
+
+print("\n")
