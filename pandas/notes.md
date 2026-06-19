@@ -251,3 +251,162 @@ pd.concat([df1, df2], axis=0)
 
 ---
 
+# Sorting Data
+
+Used to sort values in ascending or descending order.
+
+Syntax:
+
+```python
+dataframe_name.sort_values(
+    by='column_name',
+    ascending=True
+)
+```
+
+Parameters:
+
+* by → column name to sort
+* ascending=True → ascending order
+* ascending=False → descending order
+
+---
+
+# iloc[] (Index Location)
+
+Used to select rows and columns using index positions.
+
+Syntax:
+
+```python
+dataframe_name.iloc[row_index]
+```
+
+Specific row:
+
+```python
+df.iloc[0]
+```
+
+Rows and columns:
+
+```python
+df.iloc[0:2, 1:3]
+```
+
+---
+
+# value_counts()
+
+Used to count occurrences of unique values.
+
+Syntax:
+
+```python
+dataframe_name['column_name'].value_counts()
+```
+---
+
+# unique()
+
+Returns all unique values present in a column.
+
+Syntax:
+
+```python
+dataframe_name['column_name'].unique()
+```
+---
+
+# nunique()
+
+Returns the total number of unique values.
+
+Syntax:
+
+```python
+dataframe_name['column_name'].nunique()
+```
+---
+
+# Pivot Tables
+
+Used to summarize and aggregate data.
+
+Syntax:
+
+```python
+pd.pivot_table(
+    dataframe,
+    values='column_name',
+    index='row_group',
+    columns='column_group',
+    aggfunc='sum'
+)
+```
+
+Parameters:
+
+* values → column to aggregate
+* index → row grouping
+* columns → column grouping
+* aggfunc → aggregation function
+
+Common Aggregation Functions:
+
+* sum
+* mean
+* count
+* min
+* max
+
+---
+
+# Date and Time Operations
+
+Used to work with date-related information.
+
+Creating date range:
+
+```python
+pd.date_range(
+    '2023-01-01',
+    periods=10
+)
+```
+
+Extracting month:
+
+```python
+df['Month'] = df['Date'].dt.month
+```
+
+Extracting quarter:
+
+```python
+df['Quarter'] = 'Q' + df['Date'].dt.quarter.astype(str)
+```
+
+---
+
+# Aggregation Functions
+
+Common statistical functions:
+
+```python
+df['Sales'].mean()
+df['Sales'].median()
+df['Sales'].mode()
+df['Sales'].std()
+df['Sales'].var()
+```
+
+Functions:
+
+1. mean() → Average value
+2. median() → Middle value
+3. mode() → Most frequent value
+4. std() → Standard deviation
+5. var() → Variance
+
+---
