@@ -212,3 +212,140 @@ Layout:
 -----
 3 | 4
 ```
+---
+
+# Figure Size
+
+Used to control the width and height of a graph.
+
+Syntax:
+
+```python
+plt.figure(figsize=(width, height))
+```
+
+Example:
+
+```python
+plt.figure(figsize=(8,5))
+```
+
+Parameters:
+
+* width → width of figure
+* height → height of figure
+
+---
+
+# Common Plot Styles
+
+Matplotlib allows customization of line appearance.
+
+Syntax:
+
+```python
+plt.plot(x, y, color='blue', linestyle='--', marker='o')
+```
+
+Parameters:
+
+* color → changes line color
+* linestyle → changes line style
+* marker → adds markers on data points
+
+Common Line Styles:
+
+* '-' → Solid Line
+* '--' → Dashed Line
+* '-.' → Dash-Dot Line
+* ':' → Dotted Line
+
+Common Markers:
+
+* 'o' → Circle
+* 's' → Square
+* '^' → Triangle
+* '*' → Star
+
+---
+
+# Multiple Lines in One Graph
+
+Used to compare multiple datasets in a single graph.
+
+Example:
+
+```python
+plt.plot(x, x**2)
+plt.plot(x, x**3)
+```
+
+---
+
+# plt.legend()
+
+Displays labels for multiple plotted lines.
+
+Syntax:
+
+```python
+plt.legend()
+```
+
+Example:
+
+```python
+plt.plot(x, x**2, label="Square")
+plt.plot(x, x**3, label="Cube")
+
+plt.legend()
+```
+
+Output:
+
+A small box appears showing:
+
+```text
+Square
+Cube
+```
+
+---
+
+# Order of Plotting Commands
+
+A typical Matplotlib workflow:
+
+```python
+plt.figure()
+
+plt.plot()
+
+plt.title()
+
+plt.xlabel()
+
+plt.ylabel()
+
+plt.grid()
+
+plt.legend()
+
+plt.tight_layout()
+
+plt.savefig()
+
+plt.show()
+```
+
+Recommended order:
+
+1. Create Figure
+2. Plot Data
+3. Add Labels
+4. Add Grid/Legend
+5. Adjust Layout
+6. Save Figure
+7. Show Figure
+
+---
