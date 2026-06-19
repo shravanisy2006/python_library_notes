@@ -1,18 +1,18 @@
-## Matplotlib – Beginner Notes 
+# Matplotlib – Beginner Notes 
 
-## What is Matplotlib?
+# What is Matplotlib?
 
 Matplotlib is a portmanteau of MATLAB, plot, and library. It is a foundational, open-source data visualization library for the Python programming language and its numerical extension, NumPy.
 
 ---
 
-# Importing Matplotlib
+## Importing Matplotlib
 
 import matplotlib.pyplot as plt
 
 ---
 
-# Line Plot
+## Line Plot
 
 A line plot is used to visualize trends, patterns, and relationships between variables.
 
