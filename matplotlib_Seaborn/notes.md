@@ -634,3 +634,415 @@ Through these notes, I learned:
 - Visualizing distributions and relationships
 - Saving and exporting graphs
 - Comparing different visualization techniques
+
+-----
+-----
+-----
+
+# Seaborn - Beginner Notes
+
+## What is Seaborn?
+
+Seaborn is a Python data visualization library built on top of Matplotlib. It provides a high-level interface for creating attractive and informative statistical graphics.
+
+### Advantages
+
+- Easy to use
+- Built on Matplotlib
+- Better default styling
+- Statistical visualizations
+- Works seamlessly with Pandas DataFrames
+
+---
+
+# Importing Seaborn
+
+```python
+import seaborn as sns
+import matplotlib.pyplot as plt
+```
+
+---
+
+# Built-in Datasets
+
+Seaborn provides built-in datasets for learning and practice.
+
+## Syntax
+
+```python
+sns.load_dataset('dataset_name')
+```
+
+## Example
+
+```python
+tips = sns.load_dataset('tips')
+```
+
+---
+
+# Dataset Exploration
+
+## head()
+
+Displays the first *n* rows of a dataset.
+
+### Syntax
+
+```python
+dataframe.head(n)
+```
+
+### Example
+
+```python
+tips.head(10)
+```
+
+---
+
+## info()
+
+Displays:
+
+- Column Names
+- Data Types
+- Non-null Values
+- Memory Usage
+
+### Syntax
+
+```python
+dataframe.info()
+```
+
+### Example
+
+```python
+tips.info()
+```
+
+---
+
+## describe()
+
+Provides a statistical summary of numerical columns.
+
+### Includes
+
+1. Count
+2. Mean
+3. Standard Deviation
+4. Minimum Value
+5. 25th Percentile
+6. 50th Percentile (Median)
+7. 75th Percentile
+8. Maximum Value
+
+### Syntax
+
+```python
+dataframe.describe()
+```
+
+### Example
+
+```python
+tips.describe()
+```
+
+---
+
+## unique()
+
+Returns all unique values present in a column.
+
+### Syntax
+
+```python
+dataframe['column_name'].unique()
+```
+
+### Example
+
+```python
+tips['size'].unique()
+```
+
+---
+
+# Distribution Plots
+
+Distribution plots help understand how data values are spread.
+
+---
+
+## histplot()
+
+Displays the frequency distribution of numerical data.
+
+### Syntax
+
+```python
+sns.histplot(data)
+```
+
+### Example
+
+```python
+sns.histplot(
+    tips['total_bill'],
+    kde=True
+)
+```
+
+### Parameters
+
+| Parameter | Description |
+|------------|------------|
+| data | Numerical data |
+| kde | Displays density curve |
+
+### Uses
+
+- Frequency Analysis
+- Distribution Analysis
+- Outlier Detection
+
+---
+
+## KDE (Kernel Density Estimation)
+
+Provides a smooth estimate of the data distribution.
+
+### Syntax
+
+```python
+sns.histplot(
+    data,
+    kde=True
+)
+```
+
+### Example
+
+```python
+sns.histplot(
+    tips['tip'],
+    kde=True
+)
+```
+
+---
+
+## jointplot()
+
+Displays the relationship between two variables along with their distributions.
+
+### Syntax
+
+```python
+sns.jointplot(
+    x='column1',
+    y='column2',
+    data=dataframe
+)
+```
+
+### Example
+
+```python
+sns.jointplot(
+    x='total_bill',
+    y='tip',
+    data=tips,
+    kind='hist'
+)
+```
+
+### Common Types
+
+```python
+kind='scatter'
+kind='hist'
+kind='hex'
+kind='kde'
+```
+
+### Uses
+
+- Correlation Analysis
+- Relationship Visualization
+- Bivariate Distribution Analysis
+
+---
+
+## pairplot()
+
+Creates pairwise relationships between numerical features.
+
+### Syntax
+
+```python
+sns.pairplot(dataframe)
+```
+
+### Example
+
+```python
+sns.pairplot(
+    tips,
+    hue='size',
+    palette='rainbow'
+)
+```
+
+### Parameters
+
+| Parameter | Description |
+|------------|------------|
+| hue | Grouping variable |
+| palette | Color theme |
+
+### Uses
+
+- Feature Relationship Analysis
+- Exploratory Data Analysis (EDA)
+- Correlation Discovery
+
+---
+
+## rugplot()
+
+Displays each observation as a small tick mark.
+
+### Syntax
+
+```python
+sns.rugplot(
+    data=dataframe,
+    x='column_name'
+)
+```
+
+### Example
+
+```python
+sns.rugplot(
+    data=tips,
+    x='total_bill'
+)
+```
+
+### Uses
+
+- Understanding Data Distribution
+- Identifying Clusters
+- Detecting Data Density
+
+---
+
+# Common Parameters
+
+## hue
+
+Used to add color grouping based on a categorical variable.
+
+### Example
+
+```python
+hue='sex'
+```
+
+---
+
+## palette
+
+Used to change the color theme of a plot.
+
+### Example
+
+```python
+palette='rainbow'
+```
+
+### Popular Palettes
+
+```python
+deep
+muted
+bright
+pastel
+dark
+colorblind
+rainbow
+```
+
+---
+
+# Saving Plots
+
+### Syntax
+
+```python
+plt.savefig("image_name.png")
+```
+
+### Example
+
+```python
+plt.savefig("histogram_plot.png")
+```
+
+---
+
+# Common Seaborn Plot Types
+
+| Plot Type | Purpose |
+|------------|----------|
+| histplot() | Distribution Analysis |
+| jointplot() | Relationship Between Two Variables |
+| pairplot() | Relationship Between Multiple Variables |
+| rugplot() | Individual Data Point Distribution |
+
+---
+
+# Learning Outcomes
+
+Through these notes, I learned:
+
+- Loading datasets using Seaborn
+- Exploring datasets
+- Understanding distributions
+- Visualizing relationships between variables
+- Creating statistical plots
+- Performing basic Exploratory Data Analysis (EDA)
+
+---
+
+# Progress Tracker
+
+## Completed
+
+- [x] load_dataset()
+- [x] head()
+- [x] info()
+- [x] describe()
+- [x] unique()
+
+- [x] histplot()
+- [x] KDE
+- [x] jointplot()
+- [x] pairplot()
+- [x] rugplot()
+
+## Next Topics
+
+- [ ] countplot()
+- [ ] boxplot()
+- [ ] violinplot()
+- [ ] barplot()
+- [ ] heatmap()
+
+---
