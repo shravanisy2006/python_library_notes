@@ -349,3 +349,278 @@ Recommended order:
 7. Show Figure
 
 ---
+
+# Object-Oriented Approach
+
+Matplotlib provides an Object-Oriented (OO) approach where plots are created using Figure and Axes objects.
+
+Advantages:
+
+* More control over plots
+* Better for complex visualizations
+* Allows multiple plotting areas in one figure
+
+---
+
+## fig.add_axes()
+
+Used to add an Axes object to a Figure.
+
+Syntax:
+
+```python
+axes = fig.add_axes([
+    left,
+    bottom,
+    width,
+    height
+])
+```
+
+Parameters:
+
+* left → distance from left side
+* bottom → distance from bottom side
+* width → width of plotting area
+* height → height of plotting area
+
+All values range between 0 and 1.
+
+Example:
+
+```python
+axes = fig.add_axes([0.1, 0.1, 0.8, 0.8])
+```
+
+---
+
+## Multiple Axes
+
+Multiple plotting areas can be added within the same figure.
+
+Example:
+
+```python
+axes1 = fig.add_axes([0.1, 0.1, 0.8, 0.8])
+
+axes2 = fig.add_axes([0.3, 0.3, 0.4, 0.4])
+```
+
+This creates:
+
+* One main graph
+* One smaller graph inside the figure
+
+Useful for comparing plots or creating inset visualizations.
+
+---
+
+## Understanding add_axes()
+
+Syntax:
+
+axes = fig.add_axes([left, bottom, width, height])
+
+Example:
+
+axes = fig.add_axes([0.1, 0.1, 0.8, 0.8])
+
+Meaning:
+
+- left = 0.1 → 10% from left
+- bottom = 0.1 → 10% from bottom
+- width = 0.8 → 80% width
+- height = 0.8 → 80% height
+
+All values range between 0 and 1.
+
+---
+
+# Types of Plots
+
+# Bar Plot
+
+A bar plot is used to compare values across different categories.
+
+Syntax:
+
+```python
+plt.bar(x, y)
+```
+
+Parameters:
+
+* x → categories or labels
+* y → values
+
+Example:
+
+```python
+plt.bar(x, y)
+```
+
+Uses:
+
+* Comparing categories
+* Sales Analysis
+* Student Marks Comparison
+
+---
+
+# Pie Chart
+
+A pie chart represents data as portions of a whole.
+
+Syntax:
+
+```python
+plt.pie(data, labels=labels, autopct='%1.1f%%')
+```
+
+Parameters:
+
+* data → numerical values
+* labels → category labels
+* autopct → percentage display format
+
+Example:
+
+```python
+plt.pie(y, labels=Labels, autopct='%1.1f%%')
+```
+
+Uses:
+
+* Percentage Analysis
+* Market Share Visualization
+* Category Distribution
+
+---
+
+# Box Plot
+
+A box plot visualizes the spread and distribution of data.
+
+Syntax:
+
+```python
+plt.boxplot(data)
+```
+
+Example:
+
+```python
+plt.boxplot(y)
+```
+
+Uses:
+
+* Detecting Outliers
+* Understanding Data Spread
+* Comparing Distributions
+
+---
+
+## Understanding a Box Plot
+
+A box plot contains:
+
+1. Minimum Value
+2. First Quartile (Q1)
+3. Median (Q2)
+4. Third Quartile (Q3)
+5. Maximum Value
+
+Outliers are displayed as separate points outside the whiskers.
+
+---
+
+# Scatter Plot
+
+A scatter plot displays individual data points and is used to analyze relationships between two variables.
+
+Syntax:
+
+```python
+plt.scatter(x, y)
+```
+
+Parameters:
+
+* x → values for x-axis
+* y → values for y-axis
+
+Example:
+
+```python
+plt.scatter(x, y)
+```
+
+Uses:
+
+* Relationship Analysis
+* Trend Detection
+* Outlier Detection
+
+---
+
+# Histogram
+
+A histogram is used to visualize the distribution of numerical data.
+
+Syntax:
+
+```python
+plt.hist(data, bins=n)
+```
+
+Parameters:
+
+* data → numerical dataset
+* bins → number of intervals
+
+Example:
+
+```python
+plt.hist(y, bins=5)
+```
+
+Uses:
+
+* Frequency Analysis
+* Data Distribution
+* Pattern Detection
+
+---
+
+## Common Histogram Parameters
+
+### bins
+
+Controls the number of intervals.
+
+Example:
+
+```python
+plt.hist(data, bins=10)
+```
+
+More bins → More detailed distribution
+
+Fewer bins → Simpler distribution
+
+---
+
+# Common Plot Types Summary
+
+| Plot Type    | Purpose                              |
+| ------------ | ------------------------------------ |
+| Line Plot    | Show trends over time                |
+| Bar Plot     | Compare categories                   |
+| Scatter Plot | Show relationships between variables |
+| Histogram    | Show frequency distribution          |
+| Pie Chart    | Show percentage contribution         |
+| Box Plot     | Show data spread and outliers        |
+
+---
+
