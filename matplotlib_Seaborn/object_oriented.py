@@ -1,8 +1,6 @@
 #importing libraries
 
 import matplotlib.pyplot as plt
-import numpy as np
-import pandas as pd
 
 x = [1 , 2 , 3 , 4 , 5]
 y = [2 , 4 , 6 , 8 , 10]
@@ -25,5 +23,5 @@ axes1.set_xlabel('Numbers')
 axes1.set_ylabel('Doubled Values')
 axes1.grid(True)
 
-plt.savefig('Object_oriented.png')
+plt.savefig('object_oriented.png')
 plt.show()

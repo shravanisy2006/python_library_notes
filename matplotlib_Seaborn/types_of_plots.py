@@ -1,8 +1,6 @@
 #importing libraries
 
 import matplotlib.pyplot as plt
-import numpy as np
-import pandas as pd
 
 x = [1 , 2 , 3 , 4 , 5]
 y = [2 , 4 , 6 , 8 , 10]
@@ -14,7 +12,7 @@ plt.title('Bar Plot')
 plt.xlabel('Numbers')
 plt.ylabel('Doubled Values')
 plt.grid(True)
-plt.savefig('Bar_plot.png')
+plt.savefig('bar_plot.png')
 plt.show()
 
 #Pie chart
@@ -22,7 +20,7 @@ plt.show()
 Labels = ['A' , 'B' , 'C' , 'D' , 'E']
 plt.pie(y, labels = Labels, autopct = '%1.1f%%' )
 plt.title('Pie Chart')
-plt.savefig("Pie_chart.png")
+plt.savefig("pie_chart.png")
 plt.show()
 
 #Scatter plot
@@ -32,7 +30,7 @@ plt.title('Scatter Plot')
 plt.xlabel('Numbers')
 plt.ylabel('Doubled Values')
 plt.grid(True)
-plt.savefig('Scatter_plot.png')
+plt.savefig('scatter_plot.png')
 plt.show()
 
 #histogram 
@@ -42,7 +40,7 @@ plt.title('Histogram')
 plt.xlabel('Doubled Values')
 plt.ylabel('Frequency')
 plt.grid(True)
-plt.savefig('Histogram.png')
+plt.savefig('histogram.png')
 plt.show()
 
 #box plot
@@ -51,5 +49,5 @@ plt.boxplot(y)
 plt.title('Box Plot')
 plt.ylabel('Doubled Values')
 plt.grid(True)
-plt.savefig('Box_plot.png')
+plt.savefig('box_plot.png')
 plt.show()

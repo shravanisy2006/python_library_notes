@@ -624,3 +624,13 @@ Fewer bins → Simpler distribution
 
 ---
 
+# Learning Outcomes
+
+Through these notes, I learned:
+
+- Creating and customizing plots
+- Working with multiple graphs
+- Understanding object-oriented plotting
+- Visualizing distributions and relationships
+- Saving and exporting graphs
+- Comparing different visualization techniques
