@@ -994,10 +994,319 @@ plt.savefig("image_name.png")
 ```python
 plt.savefig("histogram_plot.png")
 ```
+---
+
+# Categorical Plots
+
+Categorical plots are used to visualize relationships involving categorical variables.
 
 ---
 
-# Common Seaborn Plot Types
+## countplot()
+
+Displays the count of observations in each categorical bin.
+
+### Syntax
+
+```python
+sns.countplot(
+    data=dataframe,
+    x='column_name'
+)
+```
+
+### Example
+
+```python
+sns.countplot(
+    data=tips,
+    x='smoker',
+    hue='sex'
+)
+```
+
+### Uses
+
+- Counting categorical observations
+- Comparing category frequencies
+- Visualizing class distribution
+
+---
+
+## barplot()
+
+Displays the average value of a numerical variable for each category.
+
+### Syntax
+
+```python
+sns.barplot(
+    data=dataframe,
+    x='categorical_column',
+    y='numerical_column'
+)
+```
+
+### Example
+
+```python
+sns.barplot(
+    data=tips,
+    x='sex',
+    y='tip'
+)
+```
+
+### Uses
+
+- Comparing averages
+- Category-wise analysis
+- Summarizing data
+
+---
+
+## boxplot()
+
+Visualizes the distribution of numerical data across categories.
+
+### Syntax
+
+```python
+sns.boxplot(
+    data=dataframe,
+    x='categorical_column',
+    y='numerical_column'
+)
+```
+
+### Example
+
+```python
+sns.boxplot(
+    data=tips,
+    x='smoker',
+    y='total_bill',
+    hue='sex'
+)
+```
+
+### Uses
+
+- Detecting outliers
+- Comparing distributions
+- Understanding data spread
+
+---
+
+## violinplot()
+
+Combines a box plot with a density plot.
+
+### Syntax
+
+```python
+sns.violinplot(
+    data=dataframe,
+    x='categorical_column',
+    y='numerical_column'
+)
+```
+
+### Example
+
+```python
+sns.violinplot(
+    data=tips,
+    x='sex',
+    y='tip',
+    hue='smoker'
+)
+```
+
+### Uses
+
+- Visualizing distribution shape
+- Comparing multiple distributions
+- Understanding data density
+
+---
+
+## stripplot()
+
+Displays individual observations for each category.
+
+### Syntax
+
+```python
+sns.stripplot(
+    data=dataframe,
+    x='categorical_column',
+    y='numerical_column'
+)
+```
+
+### Example
+
+```python
+sns.stripplot(
+    data=tips,
+    x='day',
+    y='tip'
+)
+```
+
+### Uses
+
+- Observing individual data points
+- Detecting outliers
+- Comparing category distributions
+
+---
+
+## swarmplot()
+
+Displays individual observations without overlapping.
+
+### Syntax
+
+```python
+sns.swarmplot(
+    data=dataframe,
+    x='categorical_column',
+    y='numerical_column'
+)
+```
+
+### Example
+
+```python
+sns.swarmplot(
+    data=tips,
+    x='day',
+    y='tip'
+)
+```
+
+### Uses
+
+- Visualizing distributions
+- Avoiding overlapping points
+- Identifying clusters
+
+---
+
+# Matrix Plots
+
+Matrix plots are used to visualize relationships between multiple variables.
+
+---
+
+## heatmap()
+
+Displays values using color intensity.
+
+### Syntax
+
+```python
+sns.heatmap(data)
+```
+
+### Example
+
+```python
+correlation = tips[
+    ['total_bill', 'tip', 'size']
+].corr()
+
+sns.heatmap(
+    correlation,
+    annot=True,
+    cmap='coolwarm'
+)
+```
+
+### Parameters
+
+| Parameter | Description |
+|------------|------------|
+| annot | Displays values inside cells |
+| cmap | Changes color theme |
+
+### Uses
+
+- Correlation Analysis
+- Feature Relationship Analysis
+- Exploratory Data Analysis
+
+---
+
+## clustermap()
+
+Displays a heatmap with hierarchical clustering.
+
+### Syntax
+
+```python
+sns.clustermap(data)
+```
+
+### Example
+
+```python
+sns.clustermap(
+    correlation,
+    cmap='coolwarm'
+)
+```
+
+### Uses
+
+- Feature Similarity Analysis
+- Hierarchical Clustering
+- Correlation Visualization
+
+---
+
+# Regression Plots
+
+Regression plots help visualize relationships between variables and fit regression lines.
+
+---
+
+## lmplot()
+
+Displays a scatter plot along with a linear regression line.
+
+### Syntax
+
+```python
+sns.lmplot(
+    data=dataframe,
+    x='feature1',
+    y='feature2'
+)
+```
+
+### Example
+
+```python
+sns.lmplot(
+    data=tips,
+    x='total_bill',
+    y='tip'
+)
+```
+
+### Uses
+
+- Trend Detection
+- Regression Analysis
+- Predictive Analysis
+- Relationship Analysis
+
+---
+
+# Updated Common Seaborn Plot Types
 
 | Plot Type | Purpose |
 |------------|----------|
@@ -1005,6 +1314,15 @@ plt.savefig("histogram_plot.png")
 | jointplot() | Relationship Between Two Variables |
 | pairplot() | Relationship Between Multiple Variables |
 | rugplot() | Individual Data Point Distribution |
+| countplot() | Count Category Frequencies |
+| barplot() | Compare Category Averages |
+| boxplot() | Detect Outliers and Distribution |
+| violinplot() | Show Distribution Shape |
+| stripplot() | Show Individual Observations |
+| swarmplot() | Non-overlapping Observations |
+| heatmap() | Correlation Visualization |
+| clustermap() | Hierarchical Clustering |
+| lmplot() | Regression Analysis |
 
 ---
 
@@ -1012,37 +1330,11 @@ plt.savefig("histogram_plot.png")
 
 Through these notes, I learned:
 
-- Loading datasets using Seaborn
-- Exploring datasets
-- Understanding distributions
-- Visualizing relationships between variables
-- Creating statistical plots
-- Performing basic Exploratory Data Analysis (EDA)
-
----
-
-# Progress Tracker
-
-## Completed
-
-- [x] load_dataset()
-- [x] head()
-- [x] info()
-- [x] describe()
-- [x] unique()
-
-- [x] histplot()
-- [x] KDE
-- [x] jointplot()
-- [x] pairplot()
-- [x] rugplot()
-
-## Next Topics
-
-- [ ] countplot()
-- [ ] boxplot()
-- [ ] violinplot()
-- [ ] barplot()
-- [ ] heatmap()
+- Creating statistical visualizations
+- Exploring categorical data
+- Understanding correlations
+- Performing regression analysis
+- Visualizing relationships between features
+- Performing Exploratory Data Analysis (EDA)
 
 ---
