@@ -47,10 +47,20 @@ tips = sns.load_dataset('tips')
 
 #strip plpt
 
-strip = sns.stripplot(tips, x = 'day' , y = 'tip' )
-strip.figure.suptitle("Tip distribution per day")
+# strip = sns.stripplot(tips, x = 'day' , y = 'tip' )
+# strip.figure.suptitle("Tip distribution per day")
+# plt.xlabel("day")
+# plt.ylabel("tip")
+# plt.tight_layout()
+# plt.savefig("strip_plot.png")
+# plt.show()
+
+#swarm plot
+
+swarm = sns.swarmplot(tips, x = 'day', y = 'tip')
+swarm.figure.suptitle("Tip distribution per day")
 plt.xlabel("day")
 plt.ylabel("tip")
 plt.tight_layout()
-plt.savefig("strip_plot.png")
+plt.savefig("swarm_plot.png")
 plt.show()
